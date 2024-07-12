@@ -8,13 +8,13 @@ export const {
   DOCTOR_COLLECTION_ID,
   APPOINTMENT_COLLECTION_ID,
   NEXT_PUBLIC_BUCKET_ID,
-  NEXT_PUBLIC_ENDPOINT,
+  NEXT_PUBLIC_ENDPOINT: ENDPOINT,
 } = process.env;
 
 const client = new sdk.Client();
 
 client
-  .setEndpoint(NEXT_PUBLIC_ENDPOINT!)
+  .setEndpoint(ENDPOINT!)
   .setProject(APPWRITE_PROJECT_ID!)
   .setKey(APPWRITE_API_KEY!);
 
